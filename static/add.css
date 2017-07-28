@@ -1,0 +1,28 @@
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input {
+    margin: 12px;
+}
+
+input.textbox {
+    height: 20px;
+    width: 300px;
+}
+
+input.hashtag {
+    zoom: 2;
+    margin-right: 2px;
+}
+
+label.hashtag {
+   font-style: italic;
+}
+
+#postbutton {
+    font-size: 32px;
+    height: 24px;
+    width: 72px;
+}

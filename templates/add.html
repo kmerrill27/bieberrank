@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BieberRank</title>
+        <link rel="stylesheet" type="text/css" href="/styles/main.css">
+        <link rel="stylesheet" type="text/css" href="/styles/add.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="/scripts/add.js"></script>
+    </head>
+    <body>
+        <h1>Add a New Bieber</h1>
+        <form method='post'>
+          <label for="title">Title</label>
+          <input class="textbox" type="text" name="title" />
+          <br/>
+
+          <div id="gifcontainer">
+            <label for="image">GIF URL</label>
+            <input id="gif" class="textbox" type="text" name="image" />
+            <br/>
+          </div>
+
+          <input class="hashtag" type="checkbox" name="swag" value="#swag"/>
+          <label class="hashtag" for="swag">#Swag</label>
+
+          <input class="hashtag" type="checkbox" name="trouble" value="#trouble" />
+          <label class="hashtag" for="trouble">#Trouble</label>
+
+          <input class="hashtag" type="checkbox" name="baby" value="#babybiebs" />
+          <label class="hashtag" for="baby">#BabyBiebs</label>
+          <br/>
+
+          <input id="postbutton" class="button" type="submit" value="Post" />
+        </form>
+    </body>
+</html>

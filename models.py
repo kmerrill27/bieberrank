@@ -25,7 +25,7 @@ def get_top_ten():
 def get_recent():
   """Fetches all GIFs posted in the past hour."""
   one_hour_ago = datetime.datetime.now() - datetime.timedelta(hours=1)
-  query = BieberImage.query(BieberImage.time_posted >= one_hour_ago)
+  query = BieberImage.query(BieberImage.time_posted > one_hour_ago)
   return query.fetch(limit=10)
 
 def get_by_tag(tag):

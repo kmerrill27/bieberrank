@@ -7,9 +7,18 @@
         <script src="scripts/main.js"></script>
     </head>
     <body>
-        <div id="heading">
-          <h1>BieberRank</h1>
-          <a href="/add">Add a New Bieber</a>
+        <div class="heading">
+          <div class="heading">
+            <h1>BieberRank</h1>
+            <a href="/add">Add a New Bieber</a>
+          </div>
+          <div>
+            <a href="/">#top10</a>
+            <a href="?filter=recent">#new</a>
+            <a href="?filter=swag">#swag</a>
+            <a href="?filter=trouble">#trouble</a>
+            <a href="?filter=babybiebs">#babybiebs</a>
+          </div>
         </div>
 
         {% for image in images %}
@@ -24,7 +33,7 @@
                 </p>
                 {% endif %}
               {% if image.votes %}
-                <p>Upvotes: {{ image.votes }}</p>
+                <p class="upvotes">Upvotes: {{ image.votes }}</p>
               {% endif %}
               <img src={{ image.image_url }}>
             </div>

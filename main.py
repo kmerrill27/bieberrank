@@ -18,6 +18,7 @@ import jinja2
 import os
 import webapp2
 import time
+from google.appengine.ext import ndb
 
 import models
 
@@ -46,8 +47,6 @@ class AddBieberHandler(webapp2.RequestHandler):
 
         models.new_image(title, image_url, tags)
 
-        # HACK. Give Datastore some time to catch up!
-        time.sleep(1)
         self.redirect('/')
 
 
@@ -56,10 +55,7 @@ class UpvoteHandler(webapp2.RequestHandler):
 
     def post(self):
         title = self.request.get('title')
-        print title
         updated_entity = models.upvote(title)
-        # HACK. Give Datastore some time to catch up!
-        time.sleep(1)
 
 
 class MainHandler(webapp2.RequestHandler):
